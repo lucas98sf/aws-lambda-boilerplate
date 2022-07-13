@@ -8,6 +8,7 @@
 		"start": "ts-node -r tsconfig-paths/register -e 'require(\"./src\").handler(require(\"./event\"))'",
 		"prebuild": "npx rimraf dist",
 		"build": "webpack",
+		"predeploy": "npx rimraf node_modules && yarn --only=prod && yarn build",
 		"deploy": "./aws/deploy.sh",
 		"test": "jest --coverage"
 	},
