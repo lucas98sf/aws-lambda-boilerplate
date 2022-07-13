@@ -1,3 +1,4 @@
+delete process.env.TS_NODE_PROJECT;
 const path = require('path');
 require('dotenv').config();
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
@@ -10,7 +11,6 @@ const config = {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
 	},
-	plugins: [new TsconfigPathsPlugin()],
 	module: {
 		rules: [
 			{
@@ -22,6 +22,12 @@ const config = {
 	},
 	resolve: {
 		extensions: ['.ts', '.js', '...'],
+		plugins: [
+			new TsconfigPathsPlugin({
+				baseUrl: './src',
+				extensions: ['.ts'],
+			}),
+		],
 	},
 };
 

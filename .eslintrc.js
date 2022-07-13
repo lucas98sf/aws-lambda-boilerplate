@@ -30,5 +30,5 @@ module.exports = {
 			},
 		],
 	},
-	ignorePatterns: ['*.config.js', '*rc.js', 'node_modules/'],
+	ignorePatterns: ['*.config.js', '*rc.js', 'node_modules/', 'dist/', 'aws/'],
 };
