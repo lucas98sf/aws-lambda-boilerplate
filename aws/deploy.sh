@@ -1,4 +1,5 @@
 #! /bin/bash
+mkdir logs
 (
 	lambda_name=${PWD##*/}
 	lambda_name=${lambda_name:-/} 
