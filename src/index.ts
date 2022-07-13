@@ -1,4 +1,5 @@
 import { APIGatewayProxyHandler } from 'aws-lambda';
+import httpStatus from 'http-status';
 
 import logger from '@/logger';
 
@@ -6,13 +7,13 @@ import logger from '@/logger';
 
 export const handler: APIGatewayProxyHandler = async event => {
 	try {
-		const result = { statusCode: 204, body: event.body! };
+		const result = { statusCode: httpStatus.OK, body: event.body! };
 
 		logger.info(JSON.stringify(result));
 
 		return result;
 	} catch (err) {
 		logger.error(err);
-		return { statusCode: 500, body: JSON.stringify(err) };
+		return { statusCode: httpStatus.INTERNAL_SERVER_ERROR, body: JSON.stringify(err) };
 	}
 };
