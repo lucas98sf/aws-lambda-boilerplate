@@ -6,14 +6,12 @@ import logger from '@/logger';
 // import config from './config';
 
 export const handler: APIGatewayProxyHandler = async event => {
-	try {
-		const result = { statusCode: httpStatus.OK, body: event.body! };
+	const result = {
+		statusCode: httpStatus.OK,
+		body: event.body!,
+		headers: { 'Content-Type': 'application/json' },
+	};
 
-		logger.debug(JSON.stringify(result));
-
-		return result;
-	} catch (err) {
-		logger.error(err);
-		throw err;
-	}
+	logger.debug(JSON.stringify(result));
+	return result;
 };
