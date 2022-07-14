@@ -21,6 +21,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.30.4",
 		"@typescript-eslint/parser": "^5.30.4",
 		"dotenv": "^16.0.1",
+		"dotenv-webpack": "^8.0.0",
 		"eslint": "^8.2.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-import": "^2.25.2",
@@ -39,8 +40,7 @@
 		"webpack-cli": "^4.10.0"
 	},
 	"dependencies": {
-		"aws-sdk": "^2.1173.0",
-		"dotenv-webpack": "^8.0.0"
+		"aws-sdk": "^2.1173.0"
 	},
 	"lint-staged": {
 		"*.ts": [
