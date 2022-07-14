@@ -13,11 +13,9 @@ module.exports = {
 		project: ['./tsconfig.json'],
 	},
 	rules: {
-		'no-console': 'error',
 		'no-unused-vars': 'off',
 		'simple-import-sort/imports': 'error',
 		'simple-import-sort/exports': 'error',
-		'no-magic-numbers': 'error',
 		'no-non-null-assertion': 'off',
 		'@typescript-eslint/no-non-null-assertion': 'off',
 		'@typescript-eslint/no-unused-vars': [
@@ -30,10 +28,5 @@ module.exports = {
 			},
 		],
 	},
-	ignorePatterns: ['**/*.js'],
-	overrides: [
-		{
-			files: ['src/**/*.ts'],
-		},
-	],
+	ignorePatterns: ['**/*.js', '__tests__'],
 };

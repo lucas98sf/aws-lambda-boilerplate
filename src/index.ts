@@ -1,16 +1,8 @@
-import { APIGatewayProxyHandler } from 'aws-lambda';
-
-import logger from '@/logger';
+import { APIGatewayProxyHandlerV2 } from 'aws-lambda';
 
 // import config from './config';
 
-export const handler: APIGatewayProxyHandler = async event => {
-	const result = {
-		statusCode: 200,
-		body: event.body!,
-		headers: { 'Content-Type': 'application/json' },
-	};
-
-	logger.debug(JSON.stringify(result));
-	return result;
+export const handler: APIGatewayProxyHandlerV2 = async (event, context) => {
+	console.log({ event, context });
+	return 'testing';
 };
