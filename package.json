@@ -5,8 +5,8 @@
 	"license": "MIT",
 	"scripts": {
 		"prepare": "husky install",
-		"start": "ts-node -r tsconfig-paths/register -e 'require(\"./src\").handler(require(\"./event\"))'",
-		"start:bundle": "node -e 'require(\"./dist/bundle\").handler(require(\"./event\"))'",
+		"start": "ts-node -r tsconfig-paths/register -e 'console.log(require(\"./src\").handler(require(\"./event\")))'",
+		"start:bundle": "node -e 'console.log(require(\"./dist/bundle\").handler(require(\"./event\")))'",
 		"clean-install": "npx rimraf node_modules yarn.lock && yarn install",
 		"prebuild": "npx rimraf dist",
 		"build": "webpack",
