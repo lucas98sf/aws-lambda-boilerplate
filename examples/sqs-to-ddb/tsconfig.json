@@ -1,0 +1,23 @@
+{
+	"compilerOptions": {
+		"lib": ["ES2015"],
+		"module": "commonjs",
+		"target": "es2021",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"moduleResolution": "node",
+		"allowUnreachableCode": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"checkJs": true,
+		"baseUrl": "src",
+		"rootDir": "src",
+		"outDir": "dist",
+		"paths": {
+			"@/*": ["*"]
+		}
+	},
+	"include": ["src/**/*.ts"]
+}
